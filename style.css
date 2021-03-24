@@ -1,7 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 #menu
 {
 	position: fixed;
 	width: 100%;
 	height: 35px;
-	background: white;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-size: 1em;
+	background: #ffffff;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	white-space: nowrap;
+	text-indent: 7px;
+}
+p
+{
+	font-weight: 100;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
+h1
+{
+	color: black;
+	font-family: 'Poppins';
+	margin: 0;
+	padding: 0;
+}
+
+
+header
+{
+	position: fixed;
+	background-color: #CAE3FF;
+	width: 100%;
+	padding: 30px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.slider
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	background: #000;
+}
+.slider .vidBx
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: 0.5s;
+	transition-delay: 0s;
+	z-index: 1;
+	clip-path: circle(0px at center)
+}
+
+.slider input[type="radio"]:checked + .vidBx
+{
+	z-index: 10;
+	clip-path: circle(100% at center);
+	transition-delay: 0.75s;
+}
+
+.slider .vidBx iframe
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slider input[type="radio"]
+{
+	position: relative;
+	z-index: 100;
+	margin: 5px;
+	margin-bottom: 40px;
+	outline: none;
+	cursor: pointer;
+}
+
+.contact-us{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background: url(contact-us.jpg)
+
+}
+
+.contact-form{
+	max-width: 700px;
+	margin-right: 50px;
+	font-family: "Poppins", sans-serif;
+
+}
+
+.contact-us .contact-form h2{
+	background-image: url("background.png");
+    background-repeat: repeat; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    margin-top: 0px; 
+    text-align: center; 
+	font-weight: bold; 
+	font-size: 45px;
+	-webkit-text-stroke: 2px black;
+    font-family: 'Steelfish Rg', 'helvetica neue', 
+                helvetica, arial, sans-serif; 
+    font-weight: 800; 
+	-webkit-font-smoothing: antialiased; 
+	text-transform: uppercase;
+}
+
+.contact-form .text-box{
+	background: #ffffff;
+	color: #000;
+	border: none;
+	width: calc(50% -10px);
+	height: 50px;
+	padding: 12px;
+	font-size: 15px;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	margin-bottom: 20px;
+	opacity: 0.9;
+}
+
+.contact-form .text-box:first-child{
+	margin-right: 15px;
+}
+
+.contact-form textarea{
+	background:#fff;
+	color: #000;
+	border: none;
+	width: 100%;
+	padding: 12px;
+	font-size: 15px;
+	min-height: 200px;
+	max-height: 400px;
+	resize: vertical;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	margin-bottom: 20px;
+	opacity: 0.9;
+}
+
+.contact-form .send-btn{
+	float: right;
+	background: #2E94E3;
+	color: #fff;
+	border: none;
+	width: 120px;
+	height: 40px;
+	font-size: 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.3s;
+	transition-property: background;
+}
+
+.contact-form .send-btn:hover{
+	background: #0582e3;
+	
+}
+
+@media screen and (max-width: 950px){
+	.contact-form{
+	margin: 30px 50px;
+	}
+
+	.contact-form h2{
+		font-size: 30px;
+	}
+
+	.contact-form .text-box{
+		width: 100%;
+	}
+}
+
+.section{
+	background: #CAE3FF;
+}
+
+
+.tiktok-embed{
+	background: #CAE3FF
+}
+
+li
+{
+	display: inline;
+	float: left;
+	z-index: 0;
+}
+
+.bg-img {
+	/* The image used */
+	/*background-image: url("img_nature.jpg");*/
+  
+	min-height: 100px;
+  
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  
+	/* Needed to position the navbar */
+	position: relative;
+
+	width: 100%;
+	position: fixed;
+	margin: 0px;
+	width: 100%;
+	padding: 0px;
+	z-index: 1500;
+  }
+  
+  /* Position the navbar container inside the image */
+  .container {
+	
+  }
+  
+  
+  /* The navbar */
+  .topnav {
+	overflow: hidden;
+	background-color: white;
+  }
+  
+  /* Navbar links */
+  .topnav a {
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
+  
+  .topnav a:hover {
+	background-color: #ddd;
+	color: black;
+  }
+
+  .topnav i {
+	float: center;
+	color: black;
+	text-align: center;
+	padding: 17px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
+  
+  .topnav i:hover {
+	background-color: #ddd;
+	color: black;
+  }
+
+
+ table {
+	width: 80%;
+	border: 1px solid black;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+
+  table th p{
+		font-weight: bold;
+		text-align: center;
+		font-size: 25px;
+  }
+
+  table th, table td{
+	  border: 1px solid black;
+	  width: 20%;
+  }
+
+  tr{
+	border: 1px solid black;
+  }
+
+
+h2 span{
+	background-image: url("background.png");
+    background-repeat: repeat; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    margin-top: 0px; 
+    text-align: center; 
+	font-weight: bold; 
+	font-size: 45px;
+	-webkit-text-stroke: 2px black;
+    font-family: 'Steelfish Rg', 'helvetica neue', 
+                helvetica, arial, sans-serif; 
+    font-weight: 800; 
+    -webkit-font-smoothing: antialiased; 
+}
+
+
+.section h1{
+	background-image: url("background.png");
+    background-repeat: repeat; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    margin-top: 0px; 
+    text-align: center; 
+	font-weight: bold; 
+	font-size: 45px;
+	-webkit-text-stroke: 2px black;
+    font-family: 'Steelfish Rg', 'helvetica neue', 
+                helvetica, arial, sans-serif; 
+    font-weight: 800; 
+    -webkit-font-smoothing: antialiased; 
 }
